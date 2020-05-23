@@ -97,6 +97,72 @@
       <h1 class="page-main__title">Сливочное мороженое</h1>
       <section class="page-main__catalog catalog">
         <h2 class="visually-hidden">Каталог сливочного мороженого</h2>
+        <div>
+          <form class="catalog__filter-modal filter-modal" method="post" action="">
+            <p class="filter-modal__input-wrapper">
+              <label for="sorting-modal">Сортировка:</label>
+              <select name="sorting" id="sorting-modal">
+                <option value="popular" selected>По популярности</option>
+                <option value="cheap">Сначала недорогие</option>
+                <option value="expensive">Сначала дорогие</option>
+                <option value="fat">По жирности</option>
+              </select>
+            </p>
+            <p class="filter-modal__input-wrapper">
+              <p>Цена:</p>
+              <input type="text" name="min-price" id="min-price-modal" value="100">
+              <input type="text" name="max-price" id="max-price-modal" value="500">
+              <div class="filter-modal__price-controls">
+                <div class="filter-modal__price-controls-bar"></div>
+                <div class="filter-modal__price-controls-toggle"></div>
+                <div class="filter-modal__price-controls-toggle"></div>
+              </div>
+            </p>
+            <p class="filter-modal__input-wrapper">
+              <p>Жирность:</p>
+              <label>
+                <input type="radio" name="fat" id="fat-modal-1" value="0">
+                0%
+              </label>
+              <label>
+                <input type="radio" name="fat" id="fat-modal-2" value="10%" checked>
+                до 10%
+              </label>
+              <label>
+                <input type="radio" name="fat" id="fat-modal-3" value="30%">
+                до 30%
+              </label>
+              <label>
+                <input type="radio" name="fat" id="fat-modal-4" value="30+%">
+                выше 30%
+              </label>
+            </p>
+            <p class="filter-modal__input-wrapper">
+              <p>Наполнители:</p>
+              <label>
+                <input type="checkbox" name="filler" id="filler-modal-1" value="chocolate" checked>
+                Шоколадные
+              </label>
+              <label>
+                <input type="checkbox" name="filler" id="filler-modal-2" value="sugar" checked>
+                Сахарные присыпки
+              </label>
+              <label>
+                <input type="checkbox" name="filler" id="filler-modal-3" value="fruit">
+                Фрукты
+              </label>
+              <label>
+                <input type="checkbox" name="filler" id="filler-modal-4" value="syrup">
+                Сиропы
+              </label>
+              <label>
+                <input type="checkbox" name="filler" id="filler-modal-5" value="jam">
+                Джемы
+              </label>
+            </p>
+            <button type="submit" name="submit">Применить</button>
+          </form>
+        </div>
         <ul class="catalog__catalog-list catalog-list">
           <li class="catalog-list__product">
             <img width="267" height="267" src="img/icecream-orange-jam.jpg" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
@@ -169,6 +235,28 @@
             <h3 class="catalog-list__product-title">Сливочное с мятным сиропом</h3>
             <p class="catalog-list__product-price">420 Р/кг</p>
             <a class="catalog-list__product-view" href="#">Быстрый просмотр</a>
+          </li>
+        </ul>
+        <ul class="catalog__pagination pagination">
+          <li class="pagination__item">
+            <a class="pagination__link" href="#">1</a>
+          </li>
+          <li class="pagination__item">
+            <a class="pagination__link" href="#">2</a>
+          </li>
+          <li class="pagination__item">
+            <a class="pagination__link" href="#">3</a>
+          </li>
+          <li class="pagination__item">
+            <a class="pagination__link" href="#">4</a>
+          </li>
+          <li class="pagination__item">
+            <a class="pagination__link" href="#">5</a>
+          </li>
+          <li class="pagination__item pagination__item--next">
+            <a class="pagination__link" href="#">
+              <span class="visually-hidden">Следующая страница</span>
+            </a>
           </li>
         </ul>
       </section>
