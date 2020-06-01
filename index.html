@@ -3,81 +3,85 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Глейси</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <header class="page-header">
-      <nav class="page-header__main-menu main-menu">
-        <div class="main-menu__logo-container">
-          <img width="154" height="64" src="img/logo-gllacy.svg" alt="Магазин мороженого Gllacy-Shop">
-        </div>
-        <ul class="main-menu__nav-list nav-list">
-          <li class="nav-list__item">
-            <a class="nav-list__link" href="#">Каталог</a>
-            <div class="nav-list__sub-menu-container">
-              <h3 class="nav-list__sub-menu-title">Новинки</h3>
-              <ul class="nav-list__sub-menu">
-                <li class="nav-list__sub-menu-item">
-                  <a class="nav-list__sub-menu-link" href="catalog.html">Сливочное</a>
-                </li>
-                <li class="nav-list__sub-menu-item">
-                  <a class="nav-list__sub-menu-link" href="#">Щербеты</a>
-                </li>
-                <li class="nav-list__sub-menu-item">
-                  <a class="nav-list__sub-menu-link" href="#">Фруктовый лед</a>
-                </li>
-                <li class="nav-list__sub-menu-item">
-                  <a class="nav-list__sub-menu-link" href="#">Мелорин</a>
-                </li>
-              </ul>
+      <div class="page-header__wrapper">
+        <nav class="page-header__main-menu main-menu">
+          <div class="main-menu__logo-container">
+            <img width="154" height="64" src="img/logo-gllacy.svg" alt="Магазин мороженого Gllacy-Shop">
+          </div>
+          <ul class="main-menu__nav-list nav-list">
+            <li class="nav-list__item">
+              <a class="nav-list__link" href="#">Каталог</a>
+              <div class="nav-list__sub-menu-container visually-hidden">
+                <h3 class="nav-list__sub-menu-title">Новинки</h3>
+                <ul class="nav-list__sub-menu">
+                  <li class="nav-list__sub-menu-item">
+                    <a class="nav-list__sub-menu-link" href="catalog.html">Сливочное</a>
+                  </li>
+                  <li class="nav-list__sub-menu-item">
+                    <a class="nav-list__sub-menu-link" href="#">Щербеты</a>
+                  </li>
+                  <li class="nav-list__sub-menu-item">
+                    <a class="nav-list__sub-menu-link" href="#">Фруктовый лед</a>
+                  </li>
+                  <li class="nav-list__sub-menu-item">
+                    <a class="nav-list__sub-menu-link" href="#">Мелорин</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="nav-list__item">
+              <a class="nav-list__link" href="#">Доставка и оплата</a>
+            </li>
+            <li class="nav-list__item">
+              <a class="nav-list__link" href="#">О компании</a>
+            </li>
+          </ul>
+        </nav>
+        <ul class="page-header__user-list user-list">
+          <li class="user-list__item">
+            <a class="user-list__link" href="#">
+              <span>Поиск</span>
+            </a>
+            <div class="user-list__search-modal-container visually-hidden">
+              <form class="user-list__search-modal search-modal" method="post" action="">
+                <label class="search-modal__label">
+                  <input class="search-modal__input" type="text" name="search" placeholder="Крем-брюле">
+                  <span class="visually-hidden">Поиск</span>
+                </label>
+              </form>
             </div>
           </li>
-          <li class="nav-list__item">
-            <a class="nav-list__link" href="#">Доставка и оплата</a>
+          <li class="user-list__item">
+            <a class="user-list__link" href="#">Вход</a>
+            <div class="user-list__authorization-modal-container visually-hidden">
+              <form class="user-list__authorization-modal authorization-modal" method="post" action="">
+                <label class="authorization-modal__label">
+                  <input class="authorization-modal__input" type="text" name="login" placeholder="email@example.com">
+                  <span class="visually-hidden">Логин (email)</span>
+                </label>
+                <label class="authorization-modal__label">
+                  <input class="authorization-modal__input" type="password" name="password" placeholder="......">
+                  <span class="visually-hidden">Пароль</span>
+                </label>
+                <button class="authorization-modal__btn" type="submit">Войти</button>
+              </form>
+              <a class="user-list__authorization-link" href="#">Забыли пароль?</a>
+              <a class="user-list__authorization-link" href="#">Новая регистрация</a>
+            </div>
           </li>
-          <li class="nav-list__item">
-            <a class="nav-list__link" href="#">О компании</a>
+          <li class="user-list__item">
+            <a class="user-list__link" href="#">Пусто</a>
           </li>
         </ul>
-      </nav>
-      <ul class="page-header__user-list user-list">
-        <li class="user-list__item">
-          <a class="user-list__link" href="#">
-            <span class="visually-hidden">Поиск</span>
-          </a>
-          <div class="user-list__search-modal-container">
-            <form class="user-list__search-modal search-modal" method="post" action="">
-              <label class="search-modal__label">
-                <input class="search-modal__input" type="text" name="search" placeholder="Крем-брюле">
-                <span class="visually-hidden">Поиск</span>
-              </label>
-            </form>
-          </div>
-        </li>
-        <li class="user-list__item">
-          <a class="user-list__link" href="#">Вход</a>
-          <div class="user-list__authorization-modal-container">
-            <form class="user-list__authorization-modal authorization-modal" method="post" action="">
-              <label class="authorization-modal__label">
-                <input class="authorization-modal__input" type="text" name="login" placeholder="email@example.com">
-                <span class="visually-hidden">Логин (email)</span>
-              </label>
-              <label class="authorization-modal__label">
-                <input class="authorization-modal__input" type="password" name="password" placeholder="......">
-                <span class="visually-hidden">Пароль</span>
-              </label>
-              <button class="authorization-modal__btn" type="submit">Войти</button>
-            </form>
-            <a class="user-list__authorization-link" href="#">Забыли пароль?</a>
-            <a class="user-list__authorization-link" href="#">Новая регистрация</a>
-          </div>
-        </li>
-        <li class="user-list__item">
-          <a class="user-list__link" href="#">Пусто</a>
-        </li>
-      </ul>
-      <div class="page-header__brief-info-container">
-        <p class="page-header__working-hours">С 10 до 20, ежедневно</p>
-        <p class="page-header__telephone">8 812 450-25-25</p>
+        <div class="page-header__brief-info-container">
+          <p class="page-header__working-hours">С 10 до 20, ежедневно</p>
+          <p class="page-header__telephone">8 812 450-25-25</p>
+        </div>
       </div>
     </header>
     <main class="page-main">
